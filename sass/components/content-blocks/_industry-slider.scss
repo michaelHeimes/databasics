@@ -1,0 +1,141 @@
+$bp-product-sm: 680px;
+
+&--industry-slider {
+	.container {
+		max-width: 1040px;
+		text-align: center;
+		padding: 0 72px;
+
+		@include respond($bp-product-sm, "down") {
+			padding: 0 32px;
+		}
+	}
+
+	.container>h2 {
+		text-align: center;
+		margin: 0 0 2rem;
+		text-transform: uppercase;
+		font-family: $font__heading;
+		font-weight: $font-weight__bold;
+		line-height: 1.15;
+		letter-spacing: 1px;
+		font-size: 1.25rem;
+		padding: 0 16px;
+
+		@include respond($bp-hamburger) {
+			font-size: 2.15rem;
+			margin: 0 0 3rem;
+		}
+	}
+
+	.button {
+		margin-top: 40px;
+		display: inline-block;
+		line-height: 24px;
+	}
+
+	.industry-slide-title {
+		span {
+			color: $color__blue;
+		}
+
+		font-size:1.5rem;
+		line-height: calc(32/24);
+		text-transform: uppercase;
+		margin:0 0 1rem 0;
+		font-weight: $font-weight__bold;
+
+		@include respond($bp-product-sm) {
+			font-size: 2rem;
+			line-height: 1.2;
+			margin: 0 0 2rem 0;
+		}
+	}
+
+	.industry-slide>p {
+		font-size: 1.125rem;
+		line-height: calc(32/18);
+		padding: 0 16px;
+		margin: 0 0 16px 0;
+
+		@include respond($bp-product-sm) {
+			font-size: 1.5rem;
+			line-height: calc(32/24);
+			padding: 0 24px;
+		}
+	}
+
+	.slick-dots {
+		position: relative;
+		margin: 24px 0 0 0;
+	}
+
+	.slick-dots li {
+		margin: 0 16px;
+	}
+
+	.slick-dots li button {
+		&:before {
+			background: #fff;
+			content: "";
+			border-radius: 50%;
+			opacity: 1;
+		}
+	}
+
+	.slick-dots li.slick-active button::before {
+		background: $color__blue;
+	}
+
+
+
+	.slick-arrow {
+		opacity: 0.25;
+		@include transition();
+		width: 34px;
+		height: 60px;
+		background: transparent center no-repeat;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&.slick-disabled {
+			cursor: not-allowed;
+
+			&:hover {
+				opacity: 0.25;
+			}
+		}
+
+		&.slick-prev {
+			z-index: 2;
+			left: -60px;
+			background-image: url('../images/arrow-prev.png');
+
+			@include respond($bp-product-sm, "down") {
+				left: auto;
+				right: 100%;
+				background-size: 17px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+		}
+
+		&.slick-next {
+			right: -60px;
+			background-image: url('../images/arrow-next.png');
+
+			@include respond($bp-product-sm, "down") {
+				right: auto;
+				left: 100%;
+				background-size: 17px 30px;
+				background-repeat: no-repeat;
+				background-position: center center;
+
+			}
+		}
+	}
+
+
+}

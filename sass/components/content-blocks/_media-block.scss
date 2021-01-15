@@ -1,0 +1,43 @@
+&--media-block {
+	.container {
+		display: flex;
+		justify-content: stretch;
+		align-items: center;
+
+		> div {
+			flex-basis: 50%;
+		}
+	}
+
+	&--media {
+		// ??
+	}
+
+	&--text {
+		padding: 2rem 4rem;
+
+		h2 {
+			margin: 0 0 2rem;
+			text-transform: uppercase;
+			font-family: $font__heading;
+			font-weight: $font-weight__bold;
+			font-size: 2.15rem;
+			line-height: 1.15;
+			color: $color__blue;
+
+			span {
+				display: block;
+				color: $color__gray;
+			}
+		}
+
+		p {
+			margin: 0 0 2rem;
+			font-size: 1.5rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

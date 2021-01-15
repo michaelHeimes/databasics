@@ -1,0 +1,68 @@
+.utility-navigation {
+	padding:1rem 1rem 0 1rem;
+	display: none;
+	z-index: 999999999999998;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	@include respond($bp-hamburger) {
+		display: block;
+	}
+	.menu-utility-container {
+		ul {
+			@include unlist;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+
+			li {
+				margin-right: 1.5rem;
+				font-size: 0.85rem;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			a {
+
+				&,
+				&:link,
+				&:visited {
+					color: $color__dark-gray;
+					text-decoration: none;
+				}
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $color__blue;
+				}
+			}
+		}
+	}
+
+	.social-links {
+		.widget {
+			margin-bottom: 0;
+		}
+
+		.circle-icon {
+			color: $color__gray;
+			border-color: $color__gray;
+			margin-left: 1rem;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $color__blue;
+				border-color: $color__blue;
+			}
+
+			&:first-child {
+				margin-left: 1.5rem;
+			}
+		}
+	}
+}

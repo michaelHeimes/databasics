@@ -1,0 +1,85 @@
+&--accordion {
+
+	h2 {
+		margin: 0 0 2.5rem;
+		font-family: $font__heading;
+		font-weight: $font-weight__bold;
+		font-size: 1.5rem;
+		line-height: 1.15;
+		text-align: center;
+
+		@media (min-width: 480px) {
+			font-size: 2rem;
+		}
+
+		@media (min-width: 768px) {
+			font-size: 2.15rem;
+			letter-spacing: 1px;
+		}
+	}
+
+	&--wrap {
+		max-width: $size__site-inner-max-text;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include respond($bp-hamburger) {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	}
+
+	&--section {
+		border-bottom: 1px solid rgba($color__text, 0.25);
+		padding: 2rem 1rem;
+
+		&.collapsed {
+			.section-title {
+				i {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+
+		.section-title {
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 0;
+			@include transition();
+
+			i {
+				@include transition();
+			}
+		}
+
+		.section-copy {
+			overflow: hidden;
+
+			p,
+			ul,
+			ol {
+				margin-top: 0;
+				margin-bottom: 1.5rem;
+			}
+
+			ul,
+			ol {
+				li {
+					margin-bottom: 0.25rem;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

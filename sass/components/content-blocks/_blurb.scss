@@ -1,0 +1,142 @@
+&--blurb {
+	&--text {
+		max-width: $size__site-inner-max-text;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
+		h2 {
+			margin: 0 0 2.5rem;
+			font-family: $font__heading;
+			font-weight: $font-weight__semi-bold;
+			font-size: 2rem;
+			line-height: 1.15;
+
+			@media (min-width: 480px) {
+				font-size: 2rem;
+			}
+
+			@media (min-width: 768px) {
+				font-size: 2.0625rem;
+				letter-spacing: 1px;
+			}
+		}
+
+		h3 {
+			margin: 0 0 2.5rem;
+			font-family: $font__heading;
+			font-weight: $font-weight__semi-bold;
+			font-size: 1.5rem;
+			line-height: 1.15;
+
+			@media (min-width: 480px) {
+				font-size: 2rem;
+			}
+
+			@media (min-width: 768px) {
+				font-size: 2.0625rem;
+				letter-spacing: 1px;
+			}
+		}
+
+		p {
+			margin: 0 0 2rem;
+			font-size: 1.5rem;
+		}
+
+		li {
+			font-size: 1.5rem;
+		}
+
+		:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&.background-color {
+		&--white {
+			h2 {
+				color: $color__blue;
+			}
+
+			h3 {
+				color: $color__blue;
+			}
+		}
+
+		&--yellow {
+			h2 {
+				color: $color__text;
+			}
+
+			h3 {
+				color: $color__white;
+			}
+		}
+
+		&--blue {
+			h2 {
+				color: $color__white;
+			}
+
+			h3 {
+				color: $color__gray;
+			}
+		}
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+//! Highlight Blurbs
+// -----------------------------------------------------------------------------
+
+&--highlight-blurb {
+	&--text {
+		max-width: $size__site-inner-max-text;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: left;
+		font-weight: $font-weight__semi-bold;
+		font-family: $font__heading;
+	}
+
+	.highlight-blurb-dark {
+		color: $color__text;
+		font-size: 1.5rem;
+		line-height: calc(32/24);
+
+		@media (min-width: 480px) {
+			font-size: 2rem;
+			line-height: calc(40/32);
+		}
+
+		@media (min-width: 768px) {
+			font-size: 2.0625rem;
+			line-height: calc(48/40);
+			letter-spacing: 0.75px;
+		}
+	}
+
+	.highlight-blurb-blue {
+		color: $color__blue;
+		margin: 48px 0 0 0;
+		font-size: 1.5rem;
+		line-height: calc(32/24);
+
+		@media (min-width: 480px) {
+			font-size: 2rem;
+			line-height: calc(40/32);
+		}
+
+		@media (min-width: 768px) {
+			font-size: 2.0625rem;
+			line-height: calc(48/40);
+			letter-spacing: 0.75px;
+		}
+	}
+}

@@ -1,0 +1,88 @@
+.site-header {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	// z-index: 999999999999998;
+	z-index: 1999999999; // fix to not compete with recaptcha
+	background: #fff;
+	padding: 0 0 0 1rem;
+
+	@include respond($bp-hamburger) {
+		padding: 0 1rem;
+		top: 48px;
+	}
+
+	.container {
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 0;
+
+		@include respond($bp-hamburger) {
+			padding: 1rem 0 2rem;
+		}
+	}
+
+	.site-branding {
+		.custom-logo-link {
+
+			display: block;
+			width: 236px;
+			height: 40px;
+
+			@include respond($bp-hamburger) {
+				width: 283px;
+				height: 48px;
+			}
+
+			svg {
+				display: block;
+			}
+		}
+	}
+}
+
+.site-header.out-of-view {
+	top: -64px;
+	transition: top 0.2s ease;
+
+	.container {
+		padding: 0.5rem 0;
+	}
+
+	.site-branding .custom-logo-link {
+		width: 48px;
+		height: 48px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	#databasics-logo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 283px;
+		max-width: none;
+		height: 48px;
+
+		.logo-text {
+			display: none;
+		}
+	}
+
+	.main-navigation a {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+}
+
+.sticky-nav .site-header.out-of-view {
+	position: fixed;
+	background-color: #fff;
+	top: 0;
+	transition: top 0.2s ease;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}

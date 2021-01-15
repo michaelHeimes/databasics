@@ -1,0 +1,85 @@
+&--wysiwyg {
+	&--text {
+		max-width: $size__site-inner-max-text;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include respond($bp-hamburger) {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+
+		h1 {
+			margin: 2rem 0 1.5rem;
+			font-family: $font__heading;
+			font-weight: $font-weight__bold;
+			font-size: 1.5rem;
+			line-height: 1.15;
+			letter-spacing: 1px;
+
+			@include respond($bp-hamburger) {
+				font-size: 2.45rem;
+				margin: 4rem 0 2.5rem;
+			}
+
+			span {
+				color: $color__blue;
+			}
+		}
+
+		h2 {
+			margin: 2rem 0 1.5rem;
+			font-family: $font__heading;
+			font-weight: $font-weight__bold;
+			font-size: 1.25rem;
+			line-height: 1.15;
+			letter-spacing: 1px;
+
+			@include respond($bp-hamburger) {
+				font-size: 2.15rem;
+				margin: 4rem 0 2.5rem;
+			}
+
+			span {
+				color: $color__blue;
+			}
+		}
+
+		h3 {
+			margin: 2rem 0 1.5rem;
+			font-family: $font__heading;
+			font-weight: $font-weight__bold;
+			font-size: 1rem;
+			line-height: 1.15;
+			letter-spacing: 1px;
+
+			@include respond($bp-hamburger) {
+				font-size: 2rem;
+				margin: 4rem 0 2.5rem;
+			}
+
+			span {
+				color: $color__blue;
+			}
+		}
+
+		p {
+			margin: 0 0 2rem;
+			font-size: 1.125rem;
+
+			@include respond($bp-hamburger) {
+				font-size: 1.5rem;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		li {
+			font-size: 1.5rem;
+		}
+	}
+}

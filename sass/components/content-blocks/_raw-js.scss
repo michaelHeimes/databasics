@@ -1,0 +1,14 @@
+&--raw-js {
+	&--contents {
+		max-width: $size__site-inner-max-text;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include respond($bp-hamburger) {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	}
+}

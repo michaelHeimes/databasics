@@ -1,0 +1,53 @@
+.login-form {}
+
+#dblogin {
+	max-width: 480px;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+
+	ul {
+		@include list-reset;
+
+		li {
+			&.field {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	label {
+		font-weight: $font-weight__bold;
+		font-size: 0.85rem;
+		text-transform: uppercase;
+	}
+
+	input[name="input_email"],
+	input[name="input_captcha"] {
+		width: 100%;
+		border: 1px solid $color__blue;
+	}
+
+	#field_submit {
+		text-align: center;
+	}
+
+	.field_hidden {
+		display: none;
+	}
+
+	.field_required {
+		color: #c00;
+	}
+
+	.validation_message {
+		color: #c00;
+		font-weight: bold;
+		padding: 0.5rem 0.75rem;
+		margin: 0 0 0.25rem;
+		border: 1px solid #c00;
+	}
+
+	p {
+		font-size: 0.85rem;
+	}
+}

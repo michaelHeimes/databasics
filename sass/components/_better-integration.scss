@@ -1,0 +1,201 @@
+$bp-cs-sm: 600px;
+
+.better-integration {
+	padding-top: 5rem;
+	padding-bottom: 4rem;
+
+	@include respond($bp-hamburger) {
+		padding-top: 5rem;
+		padding-bottom: 8rem;
+	}
+
+	.container {
+		max-width: none;
+		padding: 0;
+	}
+
+	h2 {
+		text-align: center;
+		margin: 0 0 1rem;
+		text-transform: uppercase;
+		font-family: $font__heading;
+		font-weight: $font-weight__bold;
+		line-height: 1.15;
+		letter-spacing: 1px;
+		font-size: 1.25rem;
+		padding: 0 16px;
+		color: #fff;
+
+		@include respond($bp-hamburger) {
+			font-size: 2.15rem;
+		}
+
+		span {
+			color: $color__blue;
+		}
+	}
+
+	&--grid {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+
+		> img {
+			padding: 24px 0 24px 24px;
+		}
+
+		a {
+			padding: 24px;
+
+			&,
+			&:link,
+			&:visited {
+				display: inline-block;
+				filter: invert(1);
+				transition: none;
+
+				img {
+					filter: brightness(0);
+					// @include transition();
+				}
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				filter: invert(0);
+
+				img {
+					filter: brightness(1);
+				}
+			}
+
+		}
+	}
+}
+
+
+.better-integration-slider-wrap {
+	padding:0 72px;
+	margin:64px auto 0 auto;
+	@include respond($bp-product-sm, "down") {
+		padding: 0 32px;
+	}
+}
+
+.better-integration .loading--ring {
+	display: none;
+}
+
+.better-integration.slick--loading {
+	.loading--ring {
+		display: inherit;
+	}
+}
+
+.better-integration.slick--loading  {
+	.better-integration-slider {
+		display: none;
+		opacity: 0;
+	}
+
+}
+
+.better-integration-slider {
+	max-width: 1260px;
+	margin:0 auto;
+	padding:0;
+	
+	
+
+
+	
+	.slick-track {
+		display: flex;
+		align-items: center;
+	}
+	.slick-arrow {
+			opacity: 0.25;
+			@include transition();
+			width: 34px;
+			height: 60px;
+			background: transparent center no-repeat;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&.slick-disabled {
+				cursor: not-allowed;
+
+				&:hover {
+					opacity: 0.25;
+				}
+			}
+
+			&.slick-prev {
+				z-index: 2;
+				left: -60px;
+				background-image: url('../images/arrow-prev-light.png');
+
+				@include respond($bp-product-sm, "down") {
+					left: auto;
+					right: 100%;
+					background-size: 17px 30px;
+					background-position: center center;
+					background-repeat: no-repeat;
+				}
+			}
+
+			&.slick-next {
+				right: -60px;
+				background-image: url('../images/arrow-next-light.png');
+
+				@include respond($bp-product-sm, "down") {
+					right: auto;
+					left: 100%;
+					background-size: 17px 30px;
+					background-repeat: no-repeat;
+					background-position: center center;
+
+				}
+			}
+		}
+}
+
+.better-integration-slide {
+	text-align: center;
+	a {
+		padding: 0 24px;
+		img {
+			width:100%;
+			max-width: 150px;
+			height: auto;
+		}
+		&,
+		&:link,
+		&:visited {
+			display: inline-block;
+			filter: invert(1);
+			transition: none;
+
+			img {
+				filter: brightness(0);
+				// @include transition();
+			}
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			filter: invert(0);
+
+			img {
+				filter: brightness(1);
+			}
+		}
+
+	}
+	
+}

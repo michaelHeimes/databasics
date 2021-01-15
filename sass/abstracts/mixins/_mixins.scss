@@ -1,0 +1,203 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// -----------------------------------------------------------------------------
+//! EASY MEDIA QUERIES
+// -----------------------------------------------------------------------------
+
+@mixin respond($breakpoint, $operator: "up", $dimension: 'width') {
+
+	@if $operator == "up"
+	{
+		@media print, screen and ( min-#{ $dimension }: $breakpoint) {
+			@content;
+		}
+	} @else if $operator == "down" {
+		@if unit( $breakpoint ) == "px" {
+			$breakpoint: $breakpoint - 1;
+		}
+		@media screen and (max-#{ $dimension }: $breakpoint) {
+			@content;
+		}
+	} @else  {
+		@if unit( $operator ) == "px" {
+			$operator: $operator - 1;
+		}
+		@media screen and (min-#{ $dimension }: $breakpoint) and (max-#{ $dimension }: $operator) {
+			@content;
+		}
+	}
+
+}
+
+
+// -----------------------------------------------------------------------------
+//! RESETS
+// -----------------------------------------------------------------------------
+
+@mixin unlist {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		list-style: inherit;
+	}
+
+	ul, ol {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@mixin list-reset( $with-children: false ) {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: inherit;
+	}
+
+	@if( $with-children ) {
+		ul,
+		ol {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+
+@mixin clearfix {
+	&:before, &:after { content: " "; display: table; }
+	&:after { clear: both; }
+}
+
+
+// -----------------------------------------------------------------------------
+//! PLACEHOLDER COLORS
+// -----------------------------------------------------------------------------
+
+@mixin input-placeholder() {
+	&.placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-webkit-input-placeholder {
+		@content;
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+//! TRIANGLES
+// -----------------------------------------------------------------------------
+
+@mixin triangle($direction: "down", $size: 16px, $color: #000, $multiplier: 0.7) {
+
+	display: block;
+	content: "";
+
+	width: 0;
+	height: 0;
+	border: ($size * $multiplier) solid transparent;
+
+	-moz-transform: scale(1.01);
+
+	@if $direction == up {
+		border-bottom: $size solid $color;
+	}
+	@if $direction == down {
+		border-top: $size solid $color;
+	}
+	@if $direction == right {
+		border-left: $size solid $color;
+	}
+	@if $direction == left {
+		border-right: $size solid $color;
+	}
+
+}
+
+
+// -----------------------------------------------------------------------------
+//! SCROLLABLE SHADOWS
+// -----------------------------------------------------------------------------
+
+@mixin scroll-shadow($backgroundColor: #FFF, $shadowOpacity: 0.2, $size: 14px) {
+	background:
+		/* Shadow covers */
+		//linear-gradient($backgroundColor 30%, rgba($backgroundColor, 0)),
+		//linear-gradient(rgba($backgroundColor, 0), $backgroundColor 70%) 0 100%,
+
+		/* Shadows */
+		radial-gradient(50% 0, farthest-side, rgba(#000, $shadowOpacity), rgba(#000, 0)),
+		radial-gradient(50% 100%,farthest-side, rgba(#000, $shadowOpacity), rgba(#000, 0)) 0 100%;
+	background:
+		/* Shadow covers */
+		//linear-gradient($backgroundColor 30%, rgba($backgroundColor, 0)),
+		//linear-gradient(rgba($backgroundColor, 0), $backgroundColor 70%) 0 100%,
+
+		/* Shadows */
+		radial-gradient(farthest-side at 50% 0, rgba(#000, $shadowOpacity), rgba(#000, 0)),
+		radial-gradient(farthest-side at 50% 100%, rgba(#000, $shadowOpacity), rgba(#000, 0)) 0 100%;
+	background-repeat: no-repeat;
+	//background-color: $backgroundColor;
+	background-size: 100% ($size * 2.5), 100% ($size * 2.5), 100% $size, 100% $size;
+
+	/* Opera doesn't support this in the shorthand */
+	background-attachment: local, local, scroll, scroll;
+}
+
+
+// -----------------------------------------------------------------------------
+//! LINK COLORS
+// -----------------------------------------------------------------------------
+
+@mixin link-colors($link: $color__link, $visited: $color__link-visited, $hover: $color__link-hover) {
+	a {
+		&,
+		&:link {
+			color: $link;
+		}
+
+		&:visited {
+			color: $visited;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $hover;
+		}
+	}
+}
+
+
+// -----------------------------------------------------------------------------
+//! BOX SHADOWS
+// -----------------------------------------------------------------------------
+
+@mixin box-shadow($color: $color__black, $opacity: 0.25) {
+	box-shadow: 5px 5px 3px 0px rgba($color, $opacity);
+}
+
+// -----------------------------------------------------------------------------
+//! TRANSITIONS
+// -----------------------------------------------------------------------------
+
+@mixin transition($prop: all, $speed: 0.15s, $easing: ease-in) {
+	transition: $prop $speed $easing;
+}

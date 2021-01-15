@@ -1,0 +1,21 @@
+.background-color {
+	&--white {
+		background-color: $color__white;
+	}
+
+	&--yellow {
+		background-color: $color__yellow;
+	}
+
+	&--blue {
+		background-color: $color__blue;
+	}
+
+	&--gray {
+		background-color: $color__gray2;
+	}
+
+	&--light-gray {
+		background-color: $color__light-gray2;
+	}
+}

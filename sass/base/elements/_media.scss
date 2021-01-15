@@ -1,0 +1,85 @@
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto; // Make sure images are scaled correctly.
+	max-width: 100%; // Adhere to container width.
+}
+
+figure {
+	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
+}
+
+.video-embed {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+	&--vertical {
+		width: 0;
+		height: 100%;
+		padding-right: 56.25%;
+		padding-bottom: 0;
+	}
+
+	embed,
+	iframe,
+	object,
+	video {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	&--modal {
+		height: auto;
+		padding-bottom: 0;
+		cursor: pointer;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($color__dark-gray, 0.25) url('../images/play-button.png') center center no-repeat;
+		}
+	}
+}
+
+.demo-embed {
+	
+	.demo-embed-wrap{
+		position: relative;
+		embed,
+		iframe,
+		object,
+		video {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

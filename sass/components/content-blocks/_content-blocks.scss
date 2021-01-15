@@ -1,0 +1,31 @@
+.content-block {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+
+	@include respond($bp-hamburger) {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+
+	@import 'intro';
+
+	@import 'blurb';
+
+	@import 'media-block';
+
+	@import 'recent-posts';
+
+	@import 'feature-grid';
+
+	@import 'industry-slider';
+
+	@import 'raw-js';
+
+	@import 'two-columns';
+
+	@import 'accordion';
+
+	@import 'steps';
+
+	@import 'wysiwyg';
+}

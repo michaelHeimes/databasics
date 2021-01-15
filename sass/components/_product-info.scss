@@ -1,0 +1,247 @@
+$bp-product-nav-shrink: 1200px;
+$bp-product-nav: 768px;
+$bp-cs-stack: 800px;
+$bp-product-sm: 680px;
+
+.product-info {
+	padding-top: 2rem;
+	padding-bottom: 0rem;
+	position: relative;
+	z-index: 2;
+	@include transition();
+
+	.container {
+		max-width: 1260px;
+
+		> h2 {
+			text-align: center;
+			margin: 0;
+			text-transform: uppercase;
+			font-family: $font__heading;
+			font-weight: $font-weight__bold;
+			line-height: 1.15;
+			letter-spacing: 1px;
+			font-size: 1.25rem;
+			padding: 0 16px;
+
+			@include respond($bp-product-nav) {
+				margin: 0 0 2rem 0;
+			}
+
+			@include respond($bp-hamburger) {
+				font-size: 2.15rem;
+				margin: 0 0 4rem;
+			}
+		}
+	}
+
+	@include respond($bp-product-nav) {
+		padding-top: 6rem;
+	}
+
+	.loading--ring {
+		display: none;
+	}
+
+	&.slick--loading {
+		padding-bottom: 4rem;
+
+		.loading--ring {
+			display: inherit;
+		}
+	}
+
+	&--slider {
+		&--nav,
+		&--wrap {
+			.slick--loading & {
+				display: none;
+				opacity: 0;
+			}
+		}
+	}
+
+	&--slider {
+		@include list-reset;
+		@include transition();
+		opacity: 1;
+
+		&--nav {
+			@include list-reset;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 2rem;
+			@include transition();
+			opacity: 1;
+
+			@include respond($bp-product-nav) {
+				display: flex;
+			}
+
+			li {
+				cursor: pointer;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				color: $color__text;
+				@include transition();
+				text-align: center;
+				font-family: $font__heading;
+				font-size: 1rem;
+				font-weight: $font-weight__bold;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				border-left: 2px solid $color__text;
+				border-right: 2px solid $color__text;
+
+				@include respond($bp-product-nav-shrink) {
+					font-size: 1.5rem;
+					padding-left: 2rem;
+					padding-right: 2rem;
+				}
+
+				&:first-child {
+					border-left: none;
+				}
+
+				&:last-child {
+					border-right: none;
+				}
+
+				&:hover,
+				&.active {
+					color: $color__blue;
+				}
+			}
+		}
+
+		&--wrap {
+			margin: 0 auto;
+			position: relative;
+			top: 3rem;
+			padding: 0 72px;
+
+			// @include respond($bp-product-nav, "down") {
+			// 	margin-top: -3rem;
+			// }
+
+			@include respond($bp-product-sm, "down") {
+				padding: 0 32px;
+			}
+		}
+
+		.slick-arrow {
+			opacity: 0.25;
+			@include transition();
+			width: 34px;
+			height: 60px;
+			background: transparent center no-repeat;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&.slick-disabled {
+				cursor: not-allowed;
+
+				&:hover {
+					opacity: 0.25;
+				}
+			}
+
+			&.slick-prev {
+				z-index: 2;
+				left: -60px;
+				background-image: url('../images/arrow-prev.png');
+
+				@include respond($bp-product-sm, "down") {
+					left: auto;
+					right: 100%;
+					background-size: 17px 30px;
+					background-position: center center;
+					background-repeat: no-repeat;
+				}
+			}
+
+			&.slick-next {
+				right: -60px;
+				background-image: url('../images/arrow-next.png');
+
+				@include respond($bp-product-sm, "down") {
+					right: auto;
+					left: 100%;
+					background-size: 17px 30px;
+					background-repeat: no-repeat;
+					background-position: center center;
+
+				}
+			}
+		}
+
+		li {
+			.product-info {
+				&--container {
+
+					@include respond($bp-product-sm) {
+						display: flex;
+						justify-content: stretch;
+						align-items: center;
+					}
+
+					> div {
+						flex-basis: 50%;
+						-ms-flex: 0 1 auto;
+					}
+
+					h2 {
+						margin: 0 0 2.5rem;
+						text-transform: uppercase;
+						font-family: $font__heading;
+						font-weight: $font-weight__bold;
+						font-size: 1.5rem;
+						line-height: 1.15;
+						letter-spacing: 1px;
+						color: $color__text;
+
+						@include respond($bp-product-nav) {
+							font-size: 2.15rem;
+						}
+
+						span {
+							color: $color__blue;
+						}
+					}
+
+					p {
+						font-size: 1.25rem;
+					}
+				}
+
+				&--image {
+					position: relative;
+
+					@include respond($bp-product-sm, "down") {
+						padding-left: 40px;
+					}
+
+					img {
+						position: relative;
+						margin-left: auto;
+						margin-right: auto;
+
+						@include respond($bp-product-sm, "down") {
+							width: 320px;
+							margin: 0 auto;
+						}
+					}
+				}
+
+				&--copy {
+					padding: 5rem 2rem;
+					position: relative;
+					top: -1.5rem;
+				}
+			}
+		}
+	}
+}

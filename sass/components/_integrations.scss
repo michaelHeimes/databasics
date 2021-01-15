@@ -1,0 +1,124 @@
+.integration {
+	&--intro {
+		.container {
+			max-width: $size__site-inner-max-text;
+			padding-top: 4.5rem;
+			padding-bottom: 1.5rem;
+
+			@include respond($bp-hamburger, "down") {
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+		}
+
+		.better-integration {
+			&--grid {
+				justify-content: center;
+				margin-bottom: 1.5rem;
+
+				img {
+					margin-right: 2rem;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					// &.company-logo {
+					// 	filter: invert(1) grayscale(1);
+					// }
+				}
+			}
+		}
+
+		h2 {
+			font-size: 2.75rem;
+			font-weight: $font-weight__bold;
+			margin: 0;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		h3 {
+			font-size: 1.5rem;
+			font-weight: $font-weight__bold;
+			margin: 0 0 2.5rem;
+			text-align: center;
+		}
+
+		p {
+			margin: 0 0 1rem;
+			font-size:1.5rem;
+		}
+	}
+
+	&--benefits {
+		.container {
+			max-width: $size__site-inner-max-text;
+			padding: 4.5rem 0;
+
+			@include respond($bp-hamburger, "down") {
+				padding: 2rem 0;
+			}
+		}
+
+		ul {
+			@include list-reset;
+
+			li {
+				padding: 1.15rem 0 0;
+				margin: 1.15rem 0 0;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				line-height: 1.25;
+
+				@include respond($bp-hamburger, "down") {
+					padding-left: 1rem;
+					padding-right: 1rem;
+				}
+
+				+ li {
+					border-top: 1px solid $color__dark-gray;
+				}
+
+				.feature-icon {
+					flex: 0 0 auto;
+					width: 42px;
+					text-align: center;
+					margin-right: 2rem;
+					color: $color__blue;
+
+					@include respond($bp-hamburger, "down") {
+						margin-right: 0;
+					}
+				}
+
+				&:first-child {
+					padding-top: 0;
+					margin-top: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&--outro {
+		border-bottom: 1px solid rgba($color__dark-gray, 0.5);
+		p {
+			font-size:1.5rem;
+		}
+		.container {
+			max-width: $size__site-inner-max-text;
+			padding-top: 1.5rem;
+			padding-bottom: 1.5rem;
+
+			@include respond($bp-hamburger, "down") {
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+		}
+	}
+}

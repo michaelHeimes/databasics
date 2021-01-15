@@ -1,0 +1,36 @@
+.hamburger {
+	height: 40px;
+	padding:0 1rem 0 2rem;
+	background:transparent;
+	cursor: pointer;
+	border:none;
+	&::before,
+	&::after,
+	div {
+		content: '';
+		background-color: $color__text;
+		border-radius: 0;
+		display: block;
+		height: 3px;
+		margin: 5px 0;
+		transition: all .2s ease-in-out;
+	}
+	div {
+		width: 20px;
+	}
+	&.is-active{
+		&::before {
+		  transform: translateY(8px) rotate(135deg);
+		}
+
+		&::after {
+		  transform: translateY(-8px) rotate(-135deg);
+		}
+		div {
+		 transform: scale(0);
+		}
+	}
+	@include respond($bp-hamburger) {
+		display: none;
+	}
+}

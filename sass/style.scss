@@ -1,0 +1,125 @@
+/*!
+Theme Name: DATABASICS
+Theme URI: http://underscores.me/
+Author: Atmosphere Digital
+Author URI: https://atmosphere.us
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: databasics
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+DATABASICS is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+	- FontAwesome
+	- Slick
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
+
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+@import "layouts/layout";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/components";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+@import "plugins/jetpack/infinite-scroll";
+
+/* Font Awesome
+--------------------------------------------- */
+@import "plugins/fontawesome/fontawesome";
+@import "plugins/fontawesome/solid";
+@import "plugins/fontawesome/regular";
+@import "plugins/fontawesome/brands";
+
+/* Slick slider
+--------------------------------------------- */
+@import "plugins/slick/slick";
+@import "plugins/slick/slick-theme";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/accessibility";
+
+/* Alignments
+--------------------------------------------- */
+@import "utilities/alignments";
+
+/* Background Colors
+--------------------------------------------- */
+@import "utilities/background-colors";
+
+/* Text Helpers
+--------------------------------------------- */
+@import "utilities/text-helpers";
+
+@import "utilities/margin-padding";

@@ -1,0 +1,75 @@
+.button {
+	display: inline-block;
+	background-color: $color__blue;
+	color: $color__white;
+	border-radius: 1.15rem;
+	line-height: 1;
+	font-family: $font__main;
+	font-size: 1rem;
+	font-weight: $font-weight__regular;
+	text-transform: uppercase;
+	padding: 0.5rem 2rem;
+	text-decoration: none;
+	border: 1px solid $color__blue;
+
+	&:hover,
+	&:active {
+		color: $color__white;
+		background-color: lighten($color__blue, 5%);
+	}
+
+	&--rounded {
+		border-radius: 1.15rem;
+	}
+
+	&--square {
+		border-radius: 0;
+	}
+
+	&--white {
+		background-color: $color__white;
+		color: $color__dark-gray;
+		border-color: $color__white;
+
+		&:hover,
+		&:active {
+			background-color: darken($color__white, 25%);
+		}
+	}
+
+	&--yellow {
+		background-color: $color__yellow;
+		color: $color__dark-gray;
+		border-color: $color__yellow;
+
+		&:hover,
+		&:active {
+			color: $color__dark-gray;
+			background-color: lighten($color__yellow, 5%);
+		}
+	}
+
+	&--blue {
+		background-color: $color__blue;
+		color: $color__white;
+		border-color: $color__blue;
+
+		&:hover,
+		&:active {
+			color: $color__white;
+			background-color: lighten($color__blue, 5%);
+		}
+	}
+
+	&--gray {
+		background-color: $color__gray;
+		color: $color__white;
+		border-color: $color__gray;
+
+		&:hover,
+		&:active {
+			color: $color__white;
+			background-color: lighten($color__gray, 5%);
+		}
+	}
+}

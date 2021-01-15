@@ -1,0 +1,119 @@
+$bp-recent-stack: 800px;
+$bp-recent-sm: 480px;
+
+
+&--recent-posts {
+	.container>h2 {
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $font__heading;
+		font-weight: $font-weight__bold;
+		line-height: 1.15;
+		letter-spacing: 1px;
+		font-size: 1.25rem;
+		padding: 0 16px;
+
+		@include respond($bp-hamburger) {
+			font-size: 2.15rem;
+		}
+	}
+
+	&--wrapper {
+
+		@include respond($bp-recent-stack) {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+		}
+	}
+
+	&--post {
+		width: 33.3333333333%;
+		flex: 0 0 33.3333333333%;
+		-ms-flex: 0 1 auto;
+		padding: 16px;
+
+		@include respond($bp-recent-stack, "down") {
+			width: 100%;
+		}
+
+		@include respond($bp-recent-sm, "down") {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		a {
+
+			display: block;
+			text-decoration: none;
+			color: $color__text;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: $color__text;
+
+				.recent-post {
+					&-title {
+						color: lighten($color__blue, 10%);
+
+						span {
+							border-bottom: 1px solid lighten($color__blue, 10%);
+						}
+					}
+				}
+			}
+
+			@include respond($bp-recent-stack, "down") {
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+
+			@include respond($bp-recent-sm, "down") {
+				display: block;
+			}
+		}
+
+		.recent-post {
+			&-image {
+				margin-bottom: 1.25rem;
+
+				img {
+					display: block;
+				}
+
+				@include respond($bp-recent-stack, "down") {
+					flex: 0 0 25%;
+					-ms-flex: 0 1 auto;
+					margin: 0 24px 0 0;
+					min-width: 160px;
+				}
+
+				@include respond($bp-recent-sm, "down") {
+					margin: 0 0 16px 0;
+				}
+			}
+
+			&-category {
+				margin-bottom: 1.25rem;
+				font-family: $font__heading;
+				font-weight: $font-weight__bold;
+				font-size: 1.15rem;
+				text-transform: uppercase;
+			}
+
+
+			&-title {
+
+				color: $color__blue;
+				@include transition();
+
+				span {
+					border-bottom: 1px solid $color__blue;
+					@include transition();
+				}
+			}
+		}
+	}
+}

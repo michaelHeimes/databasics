@@ -1,0 +1,113 @@
+.lpIntro {
+	padding: 40px 16px;
+
+	// @include respond(768px) {
+	// 	padding: 80px 16px;
+	// }
+
+	.container {
+		@include respond(768px) {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+	}
+}
+
+.lp-left,
+.lp-right {
+	@include respond(768px) {
+		width: 50%;
+		flex: 0 0 50%;
+		-ms-flex: 0 1 auto;
+	}
+}
+
+.lp-left {
+	@include respond(768px) {
+		padding-right: 40px;
+	}
+}
+
+.lp-right {
+	padding: 40px 0 0 0;
+
+	@include respond(768px) {
+		padding: 0 0 0 40px;
+	}
+}
+
+.lp-image {
+	margin: 24px 0;
+	text-align: center;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.lp-left,
+.lp-right {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin: 0.5em 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.lp-right {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		text-align: center;
+	}
+}
+
+.lp-right .center {
+	text-align: center;
+}
+
+.lp-ctas {
+	margin: 24px 0 0 0;
+	text-align: center;
+
+	a {
+		background-color: #00a0df;
+		color: #fff;
+		border-radius: 1.15rem;
+		line-height: 1;
+		font-size: 1rem;
+		font-weight: 400;
+		padding: 0.75rem 1.5rem;
+		margin: 0 0.5rem;
+		text-decoration: none;
+	}
+}
+
+.text-color--blue,
+.text-color--blue * {
+	color: $color__blue;
+}
+
+.text-color--white,
+.text-color--white * {
+	color: #fff;
+}
+
+.text-color--yellow,
+.text-color--yellow * {
+	color: $color__yellow;
+}
+
+.text-color--gray,
+.text-color--gray * {
+	//	color:$color__text;
+}
