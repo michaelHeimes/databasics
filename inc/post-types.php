@@ -106,6 +106,28 @@ add_action('init', function () {
 
 
 	// -----------------------------------------------------------------------------
+	// NEWS & EVENTS CUSTOM POST TYPE
+	// -----------------------------------------------------------------------------
+
+	register_post_type('news_event', [
+		'labels'              => shorthand_post_type_labels('News & Event'),
+		'public'              => true,
+		'publicly_queryable'  => false,
+		'exclude_from_search' => false,
+		'show_ui'             => true,
+		'show_in_nav_menus'   => true,
+		'show_in_menu'        => true,
+		'query_var'           => true,
+		'capability_type'     => 'post',
+		'has_archive'         => false,
+		'hierarchical'        => true,
+		'menu_icon'           => 'dashicons-layout',
+		'menu_position'       => null,
+		'supports'            => ['title', 'thumbnail', 'page-attributes', 'revisions'],
+	]);
+
+
+	// -----------------------------------------------------------------------------
 	// PARTNER CUSTOM POST TYPE
 	// -----------------------------------------------------------------------------
 
@@ -167,6 +189,36 @@ function create_contentlib_taxonomies()
 
 	register_taxonomy('integration-library-type', ['integration'], $args);
 
+
+	// -----------------------------------------------------------------------------
+	//! News & Events post type
+	// -----------------------------------------------------------------------------
+
+	$labels = [
+		'name'              => _x('Types', 'taxonomy general name', 'databasics'),
+		'singular_name'     => _x('Type', 'taxonomy singular name', 'databasics'),
+		'search_items'      => __('Search Types', 'databasics'),
+		'all_items'         => __('All Types', 'databasics'),
+		'parent_item'       => __('Parent Type', 'databasics'),
+		'parent_item_colon' => __('Parent Type:', 'databasics'),
+		'edit_item'         => __('Edit Type', 'databasics'),
+		'update_item'       => __('Update Type', 'databasics'),
+		'add_new_item'      => __('Add New Type', 'databasics'),
+		'new_item_name'     => __('New Type Name', 'databasics'),
+		'menu_name'         => __('Type', 'databasics'),
+	];
+
+	$args = [
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => ['slug' => 'news-event-type'],
+	];
+
+	register_taxonomy('news-event-type', ['news_event'], $args);
+	
 
 	// -----------------------------------------------------------------------------
 	//! Content Library post type

@@ -228,6 +228,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/functions-content_library.php';
 require get_template_directory() . '/inc/functions-integration_library.php';
+require get_template_directory() . '/inc/functions-news_event.php';
 require get_template_directory() . '/inc/functions-partners.php';
 
 /**
