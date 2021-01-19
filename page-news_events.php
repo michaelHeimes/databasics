@@ -13,6 +13,7 @@ get_header();
 
 	<?php get_template_part('template-parts/hero'); ?>
 
+	<?php if( '' !== get_post()->post_content ):?>
 	<section class="content-block content-block--intro background-color--white">
 		<div class="container">
 			<div class="content-block--intro--text">
@@ -20,7 +21,7 @@ get_header();
 			</div>
 		</div>
 	</section>
-
+	<?php endif;?>
 
 	<div class="library-wrap archive">
 		<div class="library-list-menu-toggle-wrap"><button type="button" class="library-list-menu-toggle"><span>Filter Projects</span></button></div>

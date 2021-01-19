@@ -187,15 +187,11 @@ jQuery(function ($) {
 					if (posts[p].types.includes(terms[t])) {
 						var card = '';
 						var title = posts[p].title;
-
-						card += '<div class="trio-block ' + terms[t].toLowerCase() + '">';
-						card += posts[p].link ? '<a href="' + posts[p].link + '"' : '<span';
 						
-						if ( $(card).hasClass('news') ){
-							card += ' class="trio-block-inner" target="_blank">';
-						} else {
-							card += ' class="trio-block-inner">';
-						}		
+						card += '<div class="trio-block ' + terms[t].toLowerCase() + '">';
+						card += posts[p].link ? '<a href="' + posts[p].link['url'] + '" target="' + posts[p].link['target'] + '"' : '<span';
+						
+						card += ' class="trio-block-inner">';
 						
 						card += '<div class="trio-block-photo">';
 						card +=     '<img src="' + posts[p].photo + '" class="trio-image" alt="">';
@@ -205,7 +201,7 @@ jQuery(function ($) {
 						card +=     '<div class="trio-block-blurb">' + posts[p].blurb + '</div>';
 						card += '</div>';
 												
-						card += posts[p].link ? '<div class="trio-block-button">Learn More</div>' : '';
+						card += posts[p].link ? '<div class="trio-block-button">' + posts[p].link['title'] + '</div>' : '';
 
 						card += posts[p].link ? '</a>' : '</span>';
 

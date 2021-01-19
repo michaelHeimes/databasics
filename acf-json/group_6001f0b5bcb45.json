@@ -5,7 +5,7 @@
         {
             "key": "field_6001f0b5d7d23",
             "label": "Blurb",
-            "name": "blurb",
+            "name": "news_blurb",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -63,5 +63,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610739913
+    "modified": 1611010349
 }

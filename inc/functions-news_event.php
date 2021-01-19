@@ -142,7 +142,7 @@ function news_events_get_posts($data) {
 		//Pass vars to JS
 		$obj = [
 			'title' => get_the_title(),
-			'link'  => get_field('link_url'),
+			'link'  => get_field('link'),
 			'blurb' => wpautop(get_field('news_blurb')),
 			'photo' => $photo,
 			'types' => $type_names,
