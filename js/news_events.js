@@ -15,8 +15,6 @@ jQuery(function ($) {
 
 		this.state = {
 			per_page: -1,
-			orderby: 'title', // 'menu_order',
-			order: 'ASC',
 			tags: null,
 			search: null,
 			page: 1,
