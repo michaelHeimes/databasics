@@ -9,7 +9,7 @@ if ($resources) :
 ?>
 <section class="content-block content-block--recent-posts background-color--white">
 	<div class="container">
-		<h2>Resources</h2>
+		<h2>The Latest</h2>
 		<div class="content-block--recent-posts--wrapper">
 			<?php foreach ($resources as $resource) : ?>
 				<div class="content-block--recent-posts--post">
