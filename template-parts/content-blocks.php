@@ -30,6 +30,8 @@ while (have_posts()) : the_post();
 				get_template_part('template-parts/content-block', 'raw-js');
 			elseif ($row_layout == 'two_columns') :
 				get_template_part('template-parts/content-block', 'two-columns');
+			elseif ($row_layout == 'three_cta_set') :
+				get_template_part('template-parts/content-block', 'three-cta-set');
 			elseif ($row_layout == 'gravity_form') :
 				get_template_part('template-parts/content-block', 'gravity-form');
 			elseif ($row_layout == 'steps') :

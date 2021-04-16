@@ -6,7 +6,7 @@ $bp-cs-sm: 600px;
 
 	@include respond($bp-hamburger) {
 		padding-top: 5rem;
-		padding-bottom: 8rem;
+		padding-bottom: 5rem;
 	}
 
 	.container {
@@ -73,6 +73,19 @@ $bp-cs-sm: 600px;
 
 		}
 	}
+	
+	a.cta-link {
+		display: inline-block;
+		margin-top: 2em;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 1.125rem;
+
+		@include respond($bp-hamburger) {
+			font-size: 1.5rem;
+		}		
+	}
+	
 }
 
 
