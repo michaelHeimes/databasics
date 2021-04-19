@@ -1,10 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="323px" height="442px" viewBox="0 0 323 442" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>arrow</title>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="arrow" transform="translate(0.000000, 0.057000)">
-            <polygon id="Polygon_10" fill="#B0B2B2" fill-rule="nonzero" transform="translate(161.500000, 388.500000) rotate(180.000000) translate(-161.500000, -388.500000) " points="161.5 336 323 441 0 441"></polygon>
-            <line x1="160.5" y1="0" x2="161.5" y2="350.5" id="Line_6" stroke="#B0B2B2" stroke-width="40"></line>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="323" height="1097.5" viewBox="0 0 323 1097.5">
+  <g id="Group_263" data-name="Group 263" transform="translate(-18439 -5188.5)">
+    <path id="Polygon_10" data-name="Polygon 10" d="M161.5,0,323,105H0Z" transform="translate(18762 6286) rotate(180)" fill="#b0b2b2"/>
+    <line id="Line_6" data-name="Line 6" y2="1007" transform="translate(18600.5 5188.5)" fill="none" stroke="#b0b2b2" stroke-width="40"/>
+  </g>
 </svg>

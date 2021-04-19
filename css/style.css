@@ -2174,6 +2174,22 @@ span.trio-block-inner {
 	padding-bottom: 17%;
 }
 
+.home .hero h2 {
+	font-size: 1.6rem;
+}
+
+@media print, screen and (min-width: 480px) {
+	.home .hero h2 {
+		font-size: 2.4rem;
+	}
+}
+
+@media print, screen and (min-width: 1000px) {
+	.home .hero h2 {
+		font-size: 3.2rem;
+	}
+}
+
 /* Hamburger
 --------------------------------------------- */
 .hamburger {
@@ -3343,6 +3359,8 @@ input[type="search"].library-list-search-input:focus {
 	align-items: flex-start;
 	margin-left: -3rem;
 	margin-right: -3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -3380,10 +3398,17 @@ input[type="search"].library-list-search-input:focus {
 }
 
 .content-block--three-cta-set--text h2 {
-	margin: 0 0 1rem;
+	margin: 0 auto 1rem;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 	line-height: 1.15;
+	max-width: 376px;
+}
+
+@media only screen and (min-width: 1200px) {
+	.content-block--three-cta-set--text h2 {
+		max-width: none;
+	}
 }
 
 .content-block--three-cta-set--text h2 span {
@@ -3489,6 +3514,7 @@ input[type="search"].library-list-search-input:focus {
 }
 
 .content-block--three-cta-set.top:before {
+	display: none;
 	content: '';
 	position: absolute;
 	top: 0;
@@ -3499,21 +3525,23 @@ input[type="search"].library-list-search-input:focus {
 	background-image: url(../images/svgs/arrow-down.svg);
 	background-size: 20vw;
 	background-repeat: no-repeat;
-	background-position: 50% 0%;
+	background-position: 50% 100%;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) {
 	.content-block--three-cta-set.top:before {
-		background-size: contain;
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 1250px) {
+	.content-block--three-cta-set.top:before {
+		background-size: 250px;
 	}
 }
 
 .content-block--three-cta-set.top .copy-wrap {
 	max-width: 360px;
-}
-
-.content-block--three-cta-set.bottom {
-	margin-top: -2em;
 }
 
 .content-block--three-cta-set.bottom h2 {
@@ -4195,7 +4223,7 @@ input[type="search"].library-list-search-input:focus {
 	.ctas {
 		opacity: 0;
 		display: block;
-		top: 75vh;
+		top: calc(50% + 40px);
 		right: 1.25rem;
 		transform: translateY(-50%);
 	}

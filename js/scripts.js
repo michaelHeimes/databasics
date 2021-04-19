@@ -97,7 +97,7 @@ jQuery(document).ready(function ($) {
 				if ((scrollPosition + (windowHeight * 0.75)) >= (waypointTop + 100)) {
 					$('.ctas').css({
 						position: 'fixed',
-						top: '75vh'
+						top: 'calc(50% + 40px)'
 					});
 				} else {
 					$('.ctas').css({

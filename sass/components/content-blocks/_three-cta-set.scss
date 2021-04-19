@@ -7,6 +7,8 @@
 // 		max-width: $size__site-inner-max-text;
 		margin-left: -3rem;
 		margin-right: -3rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
 
 		@include respond(768px, "down") {
 			flex-wrap: wrap;
@@ -41,10 +43,15 @@
 		}
 
 		h2 {
-			margin: 0 0 1rem;
+			margin: 0 auto 1rem;
 			font-family: $font__heading;
 			font-weight: $font-weight__bold;
 			line-height: 1.15;
+			max-width: 376px;
+			
+			@media only screen and (min-width: 1200px) {
+				max-width: none;
+			}
 			
 			span {
 				text-transform: uppercase;
@@ -174,6 +181,7 @@
 		padding-bottom: 2em;
 		
 		&:before {
+			display: none;
 		    content: '';
 		    position: absolute;
 		    top: 0;
@@ -184,10 +192,14 @@
 		    background-image: url(../images/svgs/arrow-down.svg);
 		    background-size: 20vw;
 		    background-repeat: no-repeat;
-		    background-position: 50% 0%;
+		    background-position: 50% 100%;
 		    
-		    @media only screen and (min-width: 1440px) {
-			    background-size: contain;
+		    @media only screen and (min-width: 768px) {
+			    display: block;
+		    }
+		    
+		    @media only screen and (min-width: 1250px) {
+			    background-size: 250px;
 		    }
 		    	
 		}
@@ -199,7 +211,6 @@
 	}
 
 	&.bottom {
-		margin-top: -2em;
 		
 		h2 {
 			font-style: italic;

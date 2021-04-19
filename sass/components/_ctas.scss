@@ -41,7 +41,7 @@
 	@include respond($bp-hamburger) {
 		opacity: 0;
 		display: block;
-		top: 75vh;
+		top: calc(50% + 40px);
 		right: 1.25rem;
 		transform: translateY(-50%);
 	}
