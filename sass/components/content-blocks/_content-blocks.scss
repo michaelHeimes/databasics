@@ -31,3 +31,16 @@
 
 	@import 'wysiwyg';
 }
+
+
+.reduce-spacing {
+	.content-block {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+
+	@include respond($bp-hamburger) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	}
+}

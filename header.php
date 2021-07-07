@@ -55,7 +55,7 @@
 <!-- End Google Tag Manager (noscript) -->
 	
 	<?php wp_body_open(); ?>
-	<div id="page" class="site">
+	<div id="page" class="site <?php if(get_field('reduce_section_spacing')):?>reduce-spacing<?php endif;?>">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'databasics'); ?></a>
 
 		<nav id="utility-navigation" class="utility-navigation">

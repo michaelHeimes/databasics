@@ -2190,6 +2190,10 @@ span.trio-block-inner {
 	}
 }
 
+.reduce-spacing .hero {
+	padding-bottom: 24%;
+}
+
 /* Hamburger
 --------------------------------------------- */
 .hamburger {
@@ -3802,6 +3806,18 @@ input[type="search"].library-list-search-input:focus {
 
 .content-block--wysiwyg--text li {
 	font-size: 1.5rem;
+}
+
+.reduce-spacing .content-block {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+
+@media print, screen and (min-width: 1000px) {
+	.reduce-spacing .content-block {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
 }
 
 /* Posts and pages
