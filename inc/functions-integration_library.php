@@ -100,7 +100,7 @@ function integration_library_get_posts($data) {
 		//Get the Type tax
 		$type_names = [];
 		$types      = get_the_terms(null, 'integration-library-type');
-
+		
 		if ($types) {
 			foreach ($types as $type) {
 				$type_names[] = $type->name;
@@ -111,26 +111,55 @@ function integration_library_get_posts($data) {
 			}
 		}
 
+
+				
+
+
+
 		//Get the Photo or show defautl
 		$photo = get_template_directory_uri() . '/images/content_library-default.jpg';
 		if ('' != get_the_post_thumbnail()) {
 			$photo = wp_get_attachment_image_src(get_post_thumbnail_id(), 'integration_library-thumb')[0];
 		}
-
+		
+		
+	
+		
 		//Pass vars to JS
 		$obj = [
+			'altlinkurl' => $alt_link_url,
+			'altlinktarget' => $alt_link_target,
 			'title' => get_the_title(),
 			'link'  => null,
+			'target' => '',
 			'blurb' => wpautop(get_field('library_blurb')),
 			'photo' => $photo,
 			'types' => $type_names,
 		];
 
+
 		// check if we should be linking to the integration
-		$integration_benefits = get_field('integration_benefits');
-		if (is_array($integration_benefits) && count($integration_benefits)) :
-			$obj['link'] = get_the_permalink();
-		endif;
+		
+		$alt_link = get_field('alternative_link');
+		
+		if ( !empty( $alt_link ) ) {
+			
+			$obj['link'] = $alt_link['url'];
+			$obj['target'] = $alt_link['target'];		
+		
+		} else {
+
+			$integration_benefits = get_field('integration_benefits');
+			if (is_array($integration_benefits) && count($integration_benefits)) :
+				$obj['link'] = get_the_permalink();
+			endif;			
+		
+		}	
+
+
+		
+		
+
 
 		$out['posts'][] = $obj;
 

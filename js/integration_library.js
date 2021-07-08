@@ -187,10 +187,11 @@ jQuery(function ($) {
 					if (posts[p].types.includes(terms[t])) {
 						var card = '';
 						var title = posts[p].title;
+						
 
 						card += '<div class="trio-block">';
 
-						card += posts[p].link ? '<a href="' + posts[p].link + '"' : '<span';
+						card += posts[p].link ? '<a href="' + posts[p].link + '" target="' + posts[p].target + '"' : '<span';
 
 						card += ' class="trio-block-inner">';
 						card += '<div class="trio-block-photo">';

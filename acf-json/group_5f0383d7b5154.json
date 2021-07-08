@@ -7,7 +7,7 @@
             "label": "Alternative Link",
             "name": "alternative_link",
             "type": "link",
-            "instructions": "Use this if you want the Integration CArd to link to a page other than the post. You can leave the \"link text\" field blank.",
+            "instructions": "Use this if you want the Integration Card to link to a page other than the post. You can leave the \"link text\" field blank.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -185,5 +185,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625693890
+    "modified": 1625694219
 }
